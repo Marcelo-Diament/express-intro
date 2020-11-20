@@ -10,8 +10,19 @@ app.get('/sobre', (req, res) => {
   res.send('<h1>Você está na página Sobre</h1>')
 })
 
-app.get('/produtos', (req, res) => {
-  res.send('<h1>Você está na página Produtos</h1>')
+// app.get('/produtos', (req, res) => {
+//   res.send('<h1>Você está na página Produtos</h1>')
+// })
+
+// app.get('/produtos/:id', (req, res) => {
+//   res.send(`<h1>Você está na página do Produto #${req.params.id}</h1>`)
+// })
+
+app.get('/produtos/:id?', (req, res) => {
+  let { id } = req.params
+  id
+    ? res.send(`<h1>Você está na página do Produto #${id}</h1>`)
+    : res.send('<h1>Você está na página Produtos</h1>')
 })
 
 app.get('/contato', (req, res) => {
