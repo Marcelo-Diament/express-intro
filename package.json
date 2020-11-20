@@ -4,6 +4,7 @@
   "description": "express introduction",
   "main": "app.js",
   "scripts": {
+    "start": "echo \"Start: project started\" && nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
